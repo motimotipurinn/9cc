@@ -2,7 +2,7 @@
 assert() {
   expected="$1"
   input="$2"
-  ./chibicc "$input" > tmp.s
+  ./9cc "$input" > tmp.s
   gcc -static -o tmp tmp.s
   ./tmp
   actual="$?"
